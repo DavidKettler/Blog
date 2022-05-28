@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from blog.views import DummyView
+
 urlpatterns = [
+    path('', DummyView.as_view()),
     path('admin/', admin.site.urls),
 ]
